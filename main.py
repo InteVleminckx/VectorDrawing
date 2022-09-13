@@ -22,7 +22,7 @@ class Vector:
         self.isLast = False
 
     def draw(self):
-        pygame.draw.line(WINDOW, self.color, self.rotationPos, self.endpoint, 2)
+        pygame.draw.line(WINDOW, self.color, self.rotationPos, self.endpoint, 1)
 
     def rotate(self):
 
@@ -39,9 +39,10 @@ class Vector:
 
         self.endpoint = eX, eY
 
-        if self.isLast and len(POINTS) < 360:
+        if self.isLast :
             POINTS.append((int(eX), int(eY)))
-
+            if len(POINTS) > 180:
+                POINTS.remove(POINTS[0])
 
 def drawPoints():
 
@@ -77,11 +78,7 @@ if __name__ == '__main__':
         2: [60,-4],
         3: [40, -6],
         4: [20, -10],
-        5: [15, 12],
-        6: [10, 14],
-        7: [8, 16],
-        8: [6, 18],
-        9: [4, 20],
+        5: [15, 12]
     }
 
     vec1 = Vector(start=(350,450), length=100, rotspeed=2)
