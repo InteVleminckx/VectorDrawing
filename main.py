@@ -66,7 +66,12 @@ def drawPoints():
 
 if __name__ == '__main__':
 
-
+    
+    
+    # Enkel deze waardes aanpassen
+    # De eerste waarde binnen de lijst is een de lengte van de vector
+    # De tweede waarde is de hoekgrootte waarmee hij draait -/+ bepaald de richting
+    # Kunnen ook vectoren worden toegevoegd of worden verwijderen
     vectors = {
         1: [80,-2],
         2: [60,-4],
